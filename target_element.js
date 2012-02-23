@@ -5,7 +5,7 @@
 
     var a = this, $a = $(a), result = false;
 
-    var lookupFunctions = {
+    var lookups = {
 
       memoized: function() { return $a.data('target-element') },
 
@@ -70,26 +70,25 @@
 
     };
 
-    var lookupBy = [].concat(
+    var lookupOrder = [].concat(
       'memoized',
-      (options.lookupBy || ['internalHref', 'forAttr', 'rel', 'externalHref']),
+      (options.lookupOrder || ['internalHref', 'forAttr', 'rel', 'externalHref']),
       'empty'
     );
 
-    for (var i = 0, l = lookupBy.length; i < l; i++) {
+    for (var i=0, l=lookupOrder.length; i<l; i++) {
       var
-        applicable, get,
-        always = function() { return true; },
-        nextLookupFn = lookupBy[i]
+        applicable, get, always = function() { return true; },
+        lookup = lookupOrder[i]  
       ;
 
-      if (typeof nextLookupFn === 'string') nextLookupFn = lookupFunctions[nextLookupFn];
-      if (typeof nextLookupFn === 'function') {
+      if (typeof lookup === 'string') lookup = lookups[lookup];
+      if (typeof lookup === 'function') {
         applicable = always;
-        get = nextLookupFn;
-      } else if (typeof nextLookupFn === 'object') {
-        applicable = nextLookupFn.applicable || always;
-        get = nextLookupFn.get;
+        get = lookup;
+      } else if (typeof lookup === 'object') {
+        applicable = lookup.applicable || always;
+        get = lookup.get;
       }
 
       if (applicable()) result = get();
