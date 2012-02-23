@@ -1,0 +1,26 @@
+{
+    "name": "target-element",
+    "version": "0.1.0",
+    "title": ".targetElement()",
+    "author": {
+        "name": "Jonathan Camenisch",
+        "url": "https://github.com/jcamenisch"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "TO-DO"
+        }
+    ],
+    "dependencies": {
+        "jquery": "1"
+    },
+    "description": "Returns the 'target' DOM element of a link or other DOM element, based on href, rel, or for attribute. If href points to a remote url rather than an internal anchor, will return a new node and transparently populate it from the remote url.",
+    "keywords": [
+        "DOM",
+        "utility"
+    ],
+    "files": [
+        "jquery.color.js"
+    ]
+}
