@@ -21,6 +21,6 @@
         "utility"
     ],
     "files": [
-        "jquery.target_element.js"
+        "target_element.js"
     ]
 }
