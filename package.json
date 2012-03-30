@@ -1,6 +1,6 @@
 {
     "name": "target-element",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "title": ".targetElement()",
     "author": {
         "name": "Jonathan Camenisch",
@@ -21,6 +21,6 @@
         "utility"
     ],
     "files": [
-        "jquery.color.js"
+        "jquery.target_element.js"
     ]
 }
