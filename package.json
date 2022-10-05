@@ -13,7 +13,7 @@
         }
     ],
     "dependencies": {
-        "jquery": "~> 3.0"
+        "jquery": "~3.5.0"
     },
     "description": "Returns the 'target' DOM element of a link or other DOM element, based on href, rel, or for attribute. If href points to a remote url rather than an internal anchor, will return a new node and transparently populate it from the remote url.",
     "keywords": [
